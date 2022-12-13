@@ -3,26 +3,30 @@ package com.mcan.springBoards.webApi.controller;
 import com.mcan.springBoards.business.board.BoardRequest;
 import com.mcan.springBoards.business.board.BoardResponse;
 import com.mcan.springBoards.business.board.BoardService;
+import com.mcan.springBoards.entities.BoardEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Page;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/boards")
 public class BoardController {
 
-    private BoardService boardService;
+    private final BoardService boardService;
 
     @Autowired
-    public BoardController(BoardService boardService){
+    public BoardController(BoardService boardService) {
         this.boardService = boardService;
     }
 
     @PostMapping("/add")
-    public BoardResponse add(@RequestBody BoardRequest boardRequest){
+    public BoardResponse add(@RequestBody BoardRequest boardRequest) {
         return this.boardService.add(boardRequest);
+    }
+
+    @GetMapping(value = "/", params = {"page", "size"})
+    public Page<BoardEntity> getAll(@RequestParam("page") int page, @RequestParam("size") int size) {
+        return this.boardService.getAll(page, size);
     }
 
 }
