@@ -1,4 +1,4 @@
-package com.mcan.springBoards.business.user;
+package com.mcan.springBoards.services.user;
 
 import com.mcan.springBoards.dataAccess.UserRepository;
 import com.mcan.springBoards.entities.UserEntity;

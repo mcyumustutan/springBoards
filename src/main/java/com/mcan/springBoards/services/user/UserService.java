@@ -1,4 +1,4 @@
-package com.mcan.springBoards.business.user;
+package com.mcan.springBoards.services.user;
 
 public interface UserService {
     public void login(String email, String password);

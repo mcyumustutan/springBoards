@@ -1,4 +1,4 @@
-package com.mcan.springBoards.business.task;
+package com.mcan.springBoards.services.task;
 
 
 public interface TaskService {

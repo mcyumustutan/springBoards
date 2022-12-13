@@ -1,4 +1,4 @@
-package com.mcan.springBoards.business.board;
+package com.mcan.springBoards.services.board;
 
 import com.mcan.springBoards.entities.BoardEntity;
 import org.springframework.data.domain.Page;

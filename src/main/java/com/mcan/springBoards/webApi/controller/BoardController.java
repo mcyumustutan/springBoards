@@ -1,8 +1,8 @@
 package com.mcan.springBoards.webApi.controller;
 
-import com.mcan.springBoards.business.board.BoardRequest;
-import com.mcan.springBoards.business.board.BoardResponse;
-import com.mcan.springBoards.business.board.BoardService;
+import com.mcan.springBoards.services.board.BoardRequest;
+import com.mcan.springBoards.services.board.BoardResponse;
+import com.mcan.springBoards.services.board.BoardService;
 import com.mcan.springBoards.entities.BoardEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
